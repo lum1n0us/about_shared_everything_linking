@@ -12,7 +12,7 @@ echo "⚙️  WAT to WASM ..."
 
 ${WASM_TOOLS_BIN} parse -o  ${OUT_DIR}/lib-c.wasm ./lib-c.wat
 ${WASM_TOOLS_BIN} parse -o  ${OUT_DIR}/lib-foo.wasm ./lib-foo.wat
-${WASM_TOOLS_BIN} parse -o  ${OUT_DIR}/lib-bar.wasm ./lib-bar.wat
+${WASM_TOOLS_BIN} component embed -o ${OUT_DIR}/lib-bar.wasm ./lib-bar.wit ./lib-bar.wat
 
 echo "⚙️  WASM to COMPONENT ..."
 
